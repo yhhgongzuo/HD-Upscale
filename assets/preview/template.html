@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>成品效果对比</title>
+<style>
+:root{color-scheme:dark;--bg:#01030a;--surface:#050b19;--line:#162440;--ink:#f1f6ff;--muted:#95a8c7;--accent:#4388f5;--split:50%;--ratio:1.33}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 15% 0%,#07327a38,transparent 48%),radial-gradient(ellipse at 92% 70%,#071e522a,transparent 45%),var(--bg);color:var(--ink);font:14px/1.6 'Segoe UI','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer;border:1px solid #1b3055;border-radius:9px;background:#071226;color:#dceaff;padding:10px 17px;transition:background .18s,border-color .18s,box-shadow .18s}button:hover{background:#0c2043;border-color:#699ce0;box-shadow:0 4px 18px #04112d40}button:focus-visible,input:focus-visible{outline:2px solid #89c5ff;outline-offset:5px}button svg{width:16px;height:16px;vertical-align:-3px;margin-right:8px}.shell{max-width:1376px;margin:auto;padding:0 42px 24px}
+.masthead{height:76px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #8fbaff1a;margin-bottom:27px}.brand{display:flex;align-items:center;gap:12px}.brand-icon{width:35px;height:35px;display:grid;place-items:center;border:1px solid #527bba;background:linear-gradient(145deg,#134292,#050e24);border-radius:10px;box-shadow:inset 0 1px #ffffff24,0 0 24px #2879ff15}.brand-icon svg{width:20px;height:20px}.brand strong{font-size:14px;font-weight:550;letter-spacing:1.3px}.brand small{font-size:9px;letter-spacing:2px;display:block;color:#7e9fcf;margin-top:1px}.masthead-note{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:1.5px;color:#8eaad2}.masthead-note i{width:5px;height:5px;border-radius:100%;background:#7ab9ff;box-shadow:0 0 10px #4289ef}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}.eyebrow{display:flex;align-items:center;gap:8px;font-size:9px;letter-spacing:2.2px;color:#76a9ef}.eyebrow:before{content:'';width:17px;height:1px;background:#76a9ef}h1{font-size:27px;font-weight:550;letter-spacing:1px;margin:5px 0 0}.hint{margin:5px 0 0;color:var(--muted);font-size:12px}.top-actions{display:flex;align-items:center;gap:12px}#fullscreen{background:linear-gradient(180deg,#102854,#060e22);font-size:12px;box-shadow:inset 0 1px #a2c9ff12}
+.action-link{display:inline-block;text-decoration:none;cursor:pointer;border:1px solid #1b3055;border-radius:9px;background:#071226;color:#dceaff;padding:10px 17px;transition:background .18s,border-color .18s,box-shadow .18s;font-size:12px;white-space:nowrap}.action-link:hover{background:#0c2043;border-color:#699ce0;box-shadow:0 4px 18px #04112d40}.action-primary{background:linear-gradient(125deg,#122c55,#08152c 57%,#040a16);border-color:#28436b}.action-primary:hover{background:linear-gradient(125deg,#193d73,#0a1d3e);border-color:#426da5}
+.folder-bar{display:flex;align-items:center;gap:12px;margin-top:15px;padding:11px 16px;border:1px solid #182a48;border-radius:10px;background:#050d1d;flex-wrap:wrap}.folder-bar .folder-tag{font-size:10px;letter-spacing:1.5px;color:#8eaad2;white-space:nowrap}.folder-bar code{color:#c1d5ef;font-size:11px;flex:1;min-width:200px;word-break:break-all;font-family:Consolas,'Courier New',monospace;margin:0}#copyPath{font-size:11px;padding:7px 14px}.folder-tip{flex-basis:100%;margin:0;font-size:10px;color:#7790b2}
+.viewer{border:1px solid #182d50;border-radius:16px;background:linear-gradient(160deg,#07152e,#020611 68%);padding:0;box-shadow:0 24px 65px #0005,0 0 0 5px #6b9bec05,inset 0 1px #b7d5ff12;overflow:hidden}.viewer-bar{height:43px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #789bd222;background:#030915e8;font-size:10px;color:#99b2d4}.viewer-bar .bar-title{display:flex;align-items:center;gap:9px}.bar-title svg{width:13px;height:13px;color:#72aaff}.bar-side{font-size:9px;letter-spacing:1.5px;color:#6284b6}.bar-tools{display:flex;align-items:center;gap:10px}.zoom-info{font-size:10px;color:#9fc0ee;font-variant-numeric:tabular-nums;min-width:46px;text-align:right}.bar-btn{font-size:10px;padding:6px 12px;border-radius:7px}.stage-wrap{display:flex;justify-content:center;margin:12px 12px 0;background-color:#010309;background-image:linear-gradient(#8fbaff05 1px,transparent 1px),linear-gradient(90deg,#8fbaff05 1px,transparent 1px);background-size:28px 28px;border:1px solid #14223a;border-radius:7px;overflow:hidden}.stage{position:relative;flex:none;aspect-ratio:var(--ratio);width:100%;max-width:calc((100vh - 365px)*var(--ratio));min-width:240px;overflow:hidden;touch-action:pan-y;cursor:ew-resize;user-select:none;background:repeating-conic-gradient(#060b15 0% 25%,#091020 0% 50%) 50%/20px 20px}.canvas{position:absolute;left:0;top:0;transform-origin:0 0}.stage.can-pan{cursor:grab}.stage.panning{cursor:grabbing}.stage img{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none;-webkit-user-drag:none}.after-layer{position:absolute;inset:0;clip-path:inset(0 0 0 var(--clip-x,var(--split)));background:repeating-conic-gradient(#060b15 0% 25%,#091020 0% 50%) 50%/20px 20px}.line{position:absolute;top:0;bottom:0;left:var(--split);width:2px;transform:translateX(-50%);background:#b9d9ff;box-shadow:0 0 0 1px #16375f48,0 0 14px #3b8cff90;pointer-events:none}.handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:50px;width:50px;border:1px solid #b0d4ff;pointer-events:auto;cursor:ew-resize;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:5px;background:linear-gradient(145deg,#2464d7,#0b2d75);color:white;box-shadow:0 0 0 6px #143a8140,0 6px 24px #00133666,inset 0 1px #ffffff50;font-size:21px;font-family:Arial,sans-serif}.handle:after{content:'';width:1px;height:18px;background:#b9d7ff75;position:absolute;left:50%;top:15px}.handle span:first-child{padding-right:6px}.handle span:last-child{padding-left:6px}.label{position:absolute;top:16px;border:1px solid #ffffff40;border-radius:7px;padding:6px 12px;font-size:11px;font-weight:500;color:#e9f2ff;pointer-events:none;background:#0b1b33db;backdrop-filter:blur(10px);box-shadow:0 2px 10px #0002;letter-spacing:.3px}.label small{font-size:8px;letter-spacing:1.2px;opacity:.65;margin-left:5px}.before-label{left:16px}.after-label{right:16px;background:linear-gradient(135deg,#1755c8,#092769);border-color:#84b9ff;color:white;box-shadow:0 4px 16px #0b3d7e35}
+.bottom{padding:17px 21px 18px;background:linear-gradient(180deg,#081329,#030811)}.slider-row{display:flex;align-items:center;gap:20px}.slider-row span{font-size:11px;white-space:nowrap;color:#9eb6d6}.slider-row input{appearance:none;-webkit-appearance:none;width:100%;min-width:0;height:4px;border:0;border-radius:5px;background:linear-gradient(to right,#355bab 0%,#355bab var(--value,50%),#1767ff var(--value,50%),#1767ff 100%);cursor:ew-resize;outline-offset:7px}.slider-row input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#dbeaff;border:3px solid #438cff;box-shadow:0 0 0 4px #438cff20,0 2px 5px #0004}.slider-row input::-moz-range-thumb{width:9px;height:9px;border-radius:50%;background:#dbeaff;border:3px solid #438cff;box-shadow:0 0 0 4px #438cff20}.controls{margin-top:17px;display:flex;justify-content:space-between;align-items:center;gap:15px}.segments{display:flex;padding:4px;background:#02050c;border:1px solid #182a48;border-radius:10px;gap:4px;box-shadow:inset 0 1px 5px #0003}.segments button{font-size:11px;padding:6px 17px;border:1px solid transparent;background:transparent;color:#96afcf;border-radius:6px}.segments button:hover{color:white;box-shadow:none;background:#0b1b36}.segments button.active{background:linear-gradient(180deg,#1b59c9,#0a2e79);color:white;border-color:#70a6fa;box-shadow:0 2px 8px #0c3b823b,inset 0 1px #ffffff22}.meta{text-align:right;font-size:10px;color:#718eB5;font-variant-numeric:tabular-nums}.meta b{color:#c1d5ef;font-weight:500}.note{display:flex;justify-content:space-between;gap:24px;margin-top:15px;font-size:10px;color:#7790b2;padding:0 3px}.note p{margin:0}#alignment{color:#819bbd;max-width:820px}#error{color:#ffb7b0;text-align:center;padding:20px}.footer{display:flex;justify-content:space-between;border-top:1px solid #7098d017;font-size:9px;color:#536f95;letter-spacing:1.5px;margin-top:22px;padding-top:14px}.footer span:last-child{letter-spacing:.4px}
+.viewer:fullscreen{padding:16px;background:var(--bg);border:0;border-radius:0;display:flex;flex-direction:column;justify-content:center}.viewer:fullscreen .stage{max-width:calc((100vh - 190px)*var(--ratio))}.viewer:fullscreen .viewer-bar{border:1px solid #162440;border-radius:8px 8px 0 0}.viewer:fullscreen .stage-wrap{margin-top:0}.viewer:fullscreen .bottom{border:1px solid #162440;border-radius:0 0 8px 8px}[hidden]{display:none!important}
+.viewer.pseudo-fullscreen{position:fixed;inset:0;z-index:99999;max-width:none;width:100vw;height:100vh;border-radius:0;margin:0;padding:16px;display:flex;flex-direction:column;justify-content:center;overflow:auto;background:var(--bg)}
+.viewer.pseudo-fullscreen .stage{max-width:calc((100vh - 190px)*var(--ratio))}
+.viewer.pseudo-fullscreen .stage-wrap{margin-top:0}
+.viewer.pseudo-fullscreen .viewer-bar{border:1px solid #162440;border-radius:8px 8px 0}
+.viewer.pseudo-fullscreen .bottom{border:1px solid #162440;border-radius:0 0 8px}
+@media(min-height:1250px){.stage{max-width:calc(940px*var(--ratio))}}
+@media(max-width:700px){.shell{padding:0 14px 18px}.masthead{height:65px;margin-bottom:21px}.masthead-note{display:none}header{gap:10px;align-items:center;margin-bottom:18px}h1{font-size:20px}.hint{font-size:10px;max-width:210px}.top-actions{gap:0}#fullscreen{font-size:11px;padding:9px 10px}.viewer{border-radius:12px}.viewer-bar{height:37px;padding:0 12px}.bar-side{display:none}.stage-wrap{margin:7px 7px 0}.stage{max-width:100%;min-width:0}.bottom{padding:16px 12px}.controls{align-items:flex-start;flex-wrap:wrap;gap:12px}.meta{text-align:left}.segments{width:100%;justify-content:space-between}.segments button{flex:1;padding:7px 10px}.note{display:block}.note p{margin-bottom:6px}.label{top:10px;padding:4px 8px}.label small{display:none}.before-label{left:10px}.after-label{right:10px}.handle{width:41px;height:41px}.handle:after{top:11px}.slider-row{gap:14px}.viewer:fullscreen{padding:7px}.footer{margin-top:18px}.brand strong{font-size:13px}.brand small{font-size:8px}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+
+
+/* Midnight blue: near-black foundation with restrained blue depth. */
+body{background:radial-gradient(ellipse at 12% -12%,#102c5845 0%,transparent 48%),radial-gradient(ellipse at 95% 55%,#0825572e 0%,transparent 47%),linear-gradient(135deg,#010208 0%,#040b19 46%,#02050d 78%,#010208 100%);background-attachment:fixed}
+.viewer{background:linear-gradient(135deg,#0b1930 0%,#060e1e 36%,#02050d 72%,#071329 100%);border-color:#1a2b46;box-shadow:0 28px 75px #0008,0 0 0 4px #18345c0a,inset 0 1px #99bfff0b}
+.masthead{border-bottom-color:#6a91c317}.viewer-bar{background:linear-gradient(110deg,#071020dc,#02050de8);border-bottom-color:#638ac21a}
+.stage-wrap{background-color:#010308;background-image:linear-gradient(#8fbaff03 1px,transparent 1px),linear-gradient(90deg,#8fbaff03 1px,transparent 1px);border-color:#15213a}
+.bottom{background:linear-gradient(115deg,#09162b 0%,#040a16 58%,#02050c 100%)}
+#fullscreen{background:linear-gradient(125deg,#122c55,#08152c 57%,#040a16);border-color:#28436b}
+#fullscreen:hover{background:linear-gradient(125deg,#193d73,#0a1d3e);border-color:#426da5}
+.brand-icon{background:linear-gradient(145deg,#214d8f,#070f23);border-color:#34517d}
+.segments button.active{background:linear-gradient(130deg,#215dc4,#12377c 58%,#091c44);border-color:#4575b7}
+.after-label{background:linear-gradient(130deg,#1b4d9d,#0b2457);border-color:#729bd3}
+.handle{background:linear-gradient(145deg,#2d65b7,#102b5d 70%,#07152f);border-color:#9bbbe4}
+.footer{border-top-color:#7098d012}
+[hidden]{display:none!important}</style>
+</head>
+<body>
+<main class="shell">
+ <div class="masthead"><div class="brand"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="#c8e1ff" stroke-width="1.5"/><path d="M12 4v16" stroke="#c8e1ff" stroke-width="1.5"/><path d="M7 9l-2 3 2 3M17 9l2 3-2 3" stroke="#c8e1ff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>阿辉的高清放大 Skill</strong><small>VISUAL REVIEW STUDIO</small></div></div><span class="masthead-note"><i></i> BEFORE &amp; AFTER</span></div>
+ <header><div><div class="eyebrow">IMAGE COMPARISON</div><h1>成品效果对比</h1><p class="hint">左右拖动，感受每一处细节的变化。</p></div><div class="top-actions"><a id="viewOriginal" class="action-link" target="_blank" rel="noopener">查看高清成品</a><a id="openFolder" class="action-link action-primary">下载高清成品</a><button id="fullscreen" type="button">⛶ 全屏查看</button></div></header>
+ <section class="viewer" id="viewer" aria-label="原图与成品对比">
+  <div class="viewer-bar"><span class="bar-title"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="2" width="13" height="12" rx="2" stroke="currentColor"/><path d="M8 2v12" stroke="currentColor"/></svg> 原图 / 成品</span><div class="bar-tools"><span class="zoom-info" id="zoomInfo">100%</span><button id="exitFullscreen" class="bar-btn" type="button" hidden>退出全屏</button><button id="resetView" class="bar-btn" type="button">恢复适配</button></div></div>
+  <div class="stage-wrap"><div class="stage" id="stage">
+   <div class="canvas" id="canvas"><img id="before" alt="原图" draggable="false">
+   <div class="after-layer" id="afterLayer"><img id="after" alt="成品" draggable="false"></div>
+   </div><div class="line" id="line"><div class="handle" aria-hidden="true"><span>‹</span><span>›</span></div></div>
+   <span class="label before-label" id="beforeLabel">原图 <small>BEFORE</small></span><span class="label after-label" id="afterLabel">成品 <small>AFTER</small></span>
+  </div></div>
+  <div id="error" role="alert" hidden></div>
+  <div class="bottom"><div class="slider-row"><span>原图</span><input type="range" id="slider" min="0" max="100" step="0.1" value="50" aria-label="原图与成品分界位置"><span>成品</span></div>
+   <div class="controls"><div class="segments" role="group" aria-label="预览模式"><button id="onlyBefore" type="button">只看原图</button><button id="compare" class="active" type="button">左右对比</button><button id="onlyAfter" type="button">只看成品</button></div><div class="meta" id="dimensions">正在加载图片…</div></div>
+  </div>
+ </section>
+ <div class="folder-bar"><span class="folder-tag">成品目录</span><code id="folderPath">正在加载…</code><button id="copyPath" type="button">复制路径</button><p class="folder-tip">点击“下载高清成品”保存图片。下方路径是处理环境中的位置；云端运行时请使用下载按钮。</p></div>
+ <div class="note"><p id="alignment"></p><p>支持鼠标拖动、触屏与键盘方向键</p></div>
+ <div class="footer"><span>VISUAL REVIEW</span><span>原图与成品 · 滑动对比预览</span></div>
+</main>
+<script id="image-data" type="application/json">__IMAGE_DATA__</script>
+<script id="folder-data" type="application/json">__FOLDER_DATA__</script>
+<script>
+const byId=id=>document.getElementById(id);
+function initFolder(){
+ const folder=JSON.parse(byId('folder-data').textContent);
+ const data=JSON.parse(byId('image-data').textContent);
+ const encoded=data.after.src.split(',')[1];
+ const bytes=Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));
+ const url=URL.createObjectURL(new Blob([bytes],{type:'image/png'}));
+ byId('viewOriginal').href=url;
+ byId('openFolder').href=url;byId('openFolder').download=folder.afterName;
+ byId('folderPath').textContent=folder.folderPath;
+ const copyBtn=byId('copyPath');copyBtn.onclick=async()=>{try{await navigator.clipboard.writeText(folder.folderPath)}catch{const range=document.createRange();range.selectNodeContents(byId('folderPath'));const sel=getSelection();sel.removeAllRanges();sel.addRange(range);document.execCommand('copy')}const old=copyBtn.textContent;copyBtn.textContent='已复制';setTimeout(()=>copyBtn.textContent=old,1500)};
+ window.addEventListener('pagehide',()=>URL.revokeObjectURL(url),{once:true});
+}
+const stage=byId('stage'), slider=byId('slider'), canvas=byId('canvas'), zoomInfo=byId('zoomInfo'), afterLayer=byId('afterLayer');const MIN_ZOOM=1,MAX_ZOOM=6;let Nw=0,Nh=0;
+let position=50,activePointer=null,mode=null,zoom=1,panX=0,panY=0,startX=0,startY=0,startPanX=0,startPanY=0;
+function update(value){
+ position=Math.max(0,Math.min(100,Number(value)));
+ stage.style.setProperty('--split',position+'%');slider.style.setProperty('--value',position+'%');slider.value=position;
+ slider.setAttribute('aria-valuetext',`左侧原图 ${Math.round(position)}%，右侧成品 ${Math.round(100-position)}%`);
+ byId('line').hidden=position<=0||position>=100;
+ byId('beforeLabel').hidden=position<12;byId('afterLabel').hidden=position>88;syncClip();
+ for(const [id,on] of [['onlyBefore',position===100],['compare',position>0&&position<100],['onlyAfter',position===0]]){
+  byId(id).classList.toggle('active',on);byId(id).setAttribute('aria-pressed',String(on));
+ }
+}
+function viewRect(){return stage.getBoundingClientRect()}
+function clampPan(){const r=viewRect();const minX=r.width*(1-zoom),minY=r.height*(1-zoom);panX=Math.max(minX,Math.min(0,panX));panY=Math.max(minY,Math.min(0,panY))}
+function fitScale(){const r=viewRect();return Nw?r.width/Nw:1}
+function applyTransform(){const s=fitScale()*zoom;canvas.style.transform=`translate(${panX}px,${panY}px) scale(${s})`;zoomInfo.textContent=Math.round(zoom*100)+'%';stage.classList.toggle('can-pan',zoom>1.001);syncClip()}
+function syncClip(){const r=viewRect();const s=fitScale()*zoom;const x0=(position/100*r.width-panX)/s;afterLayer.style.setProperty('--clip-x',x0+'px')}
+function setZoom(nz,mx,my){const fit=fitScale();const s0=fit*zoom;const cx=(mx-panX)/s0,cy=(my-panY)/s0;zoom=Math.max(MIN_ZOOM,Math.min(MAX_ZOOM,nz));const s1=fit*zoom;panX=mx-cx*s1;panY=my-cy*s1;clampPan();applyTransform()}
+function fromPointer(event){const box=viewRect();update((event.clientX-box.left)/box.width*100)}
+stage.addEventListener('wheel',event=>{event.preventDefault();const r=viewRect();const mx=event.clientX-r.left,my=event.clientY-r.top;const factor=event.deltaY<0?1.18:1/1.18;setZoom(zoom*factor,mx,my)},{passive:false});stage.addEventListener('pointerdown',event=>{if(event.button!==0)return;const onHandle=event.target.closest&&event.target.closest('#line');if(onHandle){mode='split'}else if(zoom>1.001){mode='pan';startX=event.clientX;startY=event.clientY;startPanX=panX;startPanY=panY;stage.classList.add('panning')}else{mode='split'}activePointer=event.pointerId;stage.setPointerCapture(event.pointerId);if(mode==='split')fromPointer(event)});
+stage.addEventListener('pointermove',event=>{if(activePointer!==event.pointerId)return;if(mode==='split'){fromPointer(event)}else if(mode==='pan'){panX=startPanX+(event.clientX-startX);panY=startPanY+(event.clientY-startY);clampPan();applyTransform()}});
+stage.addEventListener('pointerup',event=>{if(activePointer!==event.pointerId)return;if(mode==='split')fromPointer(event);mode=null;activePointer=null;stage.classList.remove('panning');if(stage.hasPointerCapture(event.pointerId))stage.releasePointerCapture(event.pointerId)});
+stage.addEventListener('pointercancel',()=>{mode=null;activePointer=null;stage.classList.remove('panning')});stage.addEventListener('lostpointercapture',()=>{activePointer=null;stage.classList.remove('panning')});
+slider.addEventListener('input',()=>update(slider.value));
+slider.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();update(position+(event.key==='ArrowRight'?1:-1)*(event.shiftKey?10:1))}});
+byId('onlyBefore').onclick=()=>update(100);byId('onlyAfter').onclick=()=>update(0);byId('compare').onclick=()=>update(50);
+const viewer=byId('viewer'),fsBtn=byId('fullscreen');
+const nativeFS=()=>document.fullscreenElement||document.webkitFullscreenElement;
+const canNative=!!(viewer.requestFullscreen||viewer.webkitRequestFullscreen);
+function refreshAfterToggle(){byId('exitFullscreen').hidden=!(nativeFS()||viewer.classList.contains('pseudo-fullscreen'));requestAnimationFrame(()=>requestAnimationFrame(()=>{clampPan();applyTransform()}))}
+fsBtn.onclick=async()=>{
+ if(nativeFS()){if(document.exitFullscreen)await document.exitFullscreen();refreshAfterToggle();return}
+ if(viewer.classList.contains('pseudo-fullscreen')){viewer.classList.remove('pseudo-fullscreen');fsBtn.textContent='⛶ 全屏查看';refreshAfterToggle();return}
+ if(canNative){
+  try{const req=viewer.requestFullscreen?viewer.requestFullscreen():viewer.webkitRequestFullscreen();if(req&&req.catch)await req;fsBtn.textContent='退出全屏';refreshAfterToggle();return}catch(e){}
+ }
+ viewer.classList.add('pseudo-fullscreen');fsBtn.textContent='退出全屏';refreshAfterToggle();
+};
+byId('exitFullscreen').onclick=()=>fsBtn.onclick();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.classList.contains('pseudo-fullscreen')){viewer.classList.remove('pseudo-fullscreen');fsBtn.textContent='⛶ 全屏查看';refreshAfterToggle()}});
+document.addEventListener('fullscreenchange',()=>{fsBtn.textContent=document.fullscreenElement?'退出全屏':'⛶ 全屏查看';refreshAfterToggle()});byId('resetView').onclick=()=>{zoom=1;panX=0;panY=0;applyTransform()};window.addEventListener('resize',()=>{clampPan();applyTransform()});
+new ResizeObserver(()=>{clampPan();applyTransform()}).observe(stage);
+async function load(){
+ try{
+  const data=JSON.parse(byId('image-data').textContent);
+  await Promise.all(['before','after'].map(key=>new Promise((resolve,reject)=>{const im=byId(key);im.onload=resolve;im.onerror=()=>reject(Error('图片未能加载，请重新生成预览文件。'));im.src=data[key].src})));
+  const a=byId('before'),b=byId('after');
+  stage.style.setProperty('--ratio',b.naturalWidth/b.naturalHeight);
+  Nw=b.naturalWidth;Nh=b.naturalHeight;
+  canvas.style.width=Nw+'px';canvas.style.height=Nh+'px';
+  byId('dimensions').innerHTML=`原图原始 <b>${data.beforeOriginalSize[0]} × ${data.beforeOriginalSize[1]}</b>　对比/成品 <b>${b.naturalWidth} × ${b.naturalHeight}</b>`;
+  const mismatch=Math.abs((a.naturalWidth/a.naturalHeight)/(b.naturalWidth/b.naturalHeight)-1)>.001;
+  byId('alignment').textContent='原图已普通放大到与成品同尺寸，按尺寸对齐展示；滚轮在框内缩放查看细节，放大后可拖动平移，抓中间圆形手柄或在正常比例下左右拖动切换对比，点“恢复适配”复位。';
+  update(50);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{clampPan();applyTransform()}));
+ }catch(error){byId('error').hidden=false;byId('error').textContent=error.message}
+}
+initFolder();load();
+</script>
+</body></html>

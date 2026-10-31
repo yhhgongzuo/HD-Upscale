@@ -1,0 +1,6 @@
+interface:
+  display_name: "阿辉的高清放大 Skill"
+  short_description: "说“用阿辉的高清放大”即可调用，自动适配图片高清重绘与增强流程"
+  default_prompt: "用阿辉的高清放大（$ahui-hd-upscale）处理这张图片。"
+policy:
+  allow_implicit_invocation: true

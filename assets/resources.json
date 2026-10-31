@@ -1,0 +1,98 @@
+[
+  {
+    "platform": "linux-x86_64",
+    "kind": "art",
+    "filename": "ART-1.26.10-linux64.tar.xz",
+    "url": "https://github.com/artraweditor/ART/releases/download/1.26.10/ART-1.26.10-linux64.tar.xz",
+    "sha256": "7a58560e98be5c849cec1b31d0512a99b199ee6357623ef377c0f8cda065cc55",
+    "size": 105198772
+  },
+  {
+    "platform": "linux-x86_64",
+    "kind": "python",
+    "filename": "python.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+    "sha256": "ce4f6d0a6cfdb3bed6e44c2f9affd85943c76a42e25ad3a259002f31d6fb8a20",
+    "size": 34505639
+  },
+  {
+    "platform": "linux-aarch64",
+    "kind": "art",
+    "filename": "ART-1.26.10-linux-aarch64.tar.xz",
+    "url": "https://github.com/artraweditor/ART/releases/download/1.26.10/ART-1.26.10-linux-aarch64.tar.xz",
+    "sha256": "b46e672facf650c2a3d3608d88217f7b78f8e63b661959b6082c2dff1d63c915",
+    "size": 92969664
+  },
+  {
+    "platform": "linux-aarch64",
+    "kind": "python",
+    "filename": "python.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz",
+    "sha256": "bb4b6392670c5d3f93876996fcaa19858a4a413a0c7720144c18b0d6f1f0db2d",
+    "size": 29234064
+  },
+  {
+    "platform": "macos-x86_64",
+    "kind": "art",
+    "filename": "ART-1.26.10_macOS-15.7_x64.dmg",
+    "url": "https://github.com/artraweditor/ART/releases/download/1.26.10/ART-1.26.10_macOS-15.7_x64.dmg",
+    "sha256": "61ab06b8a36f24260d230def2ca28ea142b47c60df9378bcb180e0ab010d38d2",
+    "size": 151612638
+  },
+  {
+    "platform": "macos-x86_64",
+    "kind": "python",
+    "filename": "python.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-x86_64-apple-darwin-install_only_stripped.tar.gz",
+    "sha256": "37c38fda76fec1fbf310adcbafb7f0d96af13b5511bf8ea954c3aa8eec185734",
+    "size": 24757272
+  },
+  {
+    "platform": "macos-aarch64",
+    "kind": "art",
+    "filename": "ART-1.26.10_macOS-14.8_arm64.dmg",
+    "url": "https://github.com/artraweditor/ART/releases/download/1.26.10/ART-1.26.10_macOS-14.8_arm64.dmg",
+    "sha256": "749f6013ca51293cbbdbd926fa437a1a23ae876460b9c7cb959c4f90e0c03559",
+    "size": 147237170
+  },
+  {
+    "platform": "macos-aarch64",
+    "kind": "python",
+    "filename": "python.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-aarch64-apple-darwin-install_only_stripped.tar.gz",
+    "sha256": "353d5f1b4fd2715e7053f12f068435d5bbad16b91e057006b5d01e0925709a7e",
+    "size": 25035343
+  },
+  {
+    "platform": "linux-x86_64",
+    "kind": "pillow",
+    "filename": "pillow-12.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/e9/9e/c05e19657fd57841e476be1ab46c4d501bffbadbafdc31a6d665f8b737b6/pillow-12.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "b86024e52a1b269467a802258c25521e6d742349d760728092e1bc2d135b4d76",
+    "size": 8094744
+  },
+  {
+    "platform": "linux-aarch64",
+    "kind": "pillow",
+    "filename": "pillow-12.2.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+    "url": "https://files.pythonhosted.org/packages/de/af/4e8e6869cbed569d43c416fad3dc4ecb944cb5d9492defaed89ddd6fe871/pillow-12.2.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+    "sha256": "03e7e372d5240cc23e9f07deca4d775c0817bffc641b01e9c3af208dbd300987",
+    "size": 6284462
+  },
+  {
+    "platform": "macos-x86_64",
+    "kind": "pillow",
+    "filename": "pillow-12.2.0-cp312-cp312-macosx_10_13_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/58/be/7482c8a5ebebbc6470b3eb791812fff7d5e0216c2be3827b30b8bb6603ed/pillow-12.2.0-cp312-cp312-macosx_10_13_x86_64.whl",
+    "sha256": "2d192a155bbcec180f8564f693e6fd9bccff5a7af9b32e2e4bf8c9c69dbad6b5",
+    "size": 5308279
+  },
+  {
+    "platform": "macos-aarch64",
+    "kind": "pillow",
+    "filename": "pillow-12.2.0-cp312-cp312-macosx_11_0_arm64.whl",
+    "url": "https://files.pythonhosted.org/packages/d8/95/0a351b9289c2b5cbde0bacd4a83ebc44023e835490a727b2a3bd60ddc0f4/pillow-12.2.0-cp312-cp312-macosx_11_0_arm64.whl",
+    "sha256": "f3f40b3c5a968281fd507d519e444c35f0ff171237f4fdde090dd60699458421",
+    "size": 4695490
+  }
+]

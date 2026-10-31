@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 工作产物
+work/
+
+# 完整安装包与离线引擎二进制（体积超过 GitHub 单文件 100MB 限制，仅通过 Release 分发）
+*.zip
+assets/platforms/**/*.dmg
+assets/platforms/**/*.tar.xz
+assets/platforms/**/*.tar.gz
+assets/platforms/**/*.whl
